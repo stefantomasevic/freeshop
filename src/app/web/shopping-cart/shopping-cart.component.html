@@ -1,0 +1,73 @@
+
+
+
+<div class="cart-box-main">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="table-main table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Images</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of cartItems">
+                <td class="thumbnail-img">
+                  <a href="#">
+                    <img class="img-fluid"
+                      src="https://glossy.espreso.co.rs/data/images/2016/10/29/20/140895_shutterstock-121336021_ff.jpg?ver=1477764137"
+                      alt="" />
+                  </a>
+                </td>
+                <td class="name-pr">
+                  <a href="#">
+                    {{ product.title }}
+                  </a>
+                </td>
+                <td class="price-pr">
+                  <p>{{ product.price }}</p>
+                </td>
+                <td class="quantity-box"><input type="number" size="4" [(ngModel)]="product.quantity"  min="0" step="1"
+                    class="c-input-text qty text" (change)="updateCartItem()"></td>
+                <td class="total-pr">
+                  <p>$ {{ product.quantity * product.price}}</p>
+                </td>
+                <td class="remove-pr">
+                  <a (click)="removeCartItem(product.id)">
+                    <span class="material-icons">
+                      close
+                    </span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row my-5">
+      <div class="col-lg-6 col-sm-6">
+          <div class="coupon-box">
+              <div class="input-group input-group-sm">
+                  <input class="form-control" placeholder="Enter your coupon code" aria-label="Coupon code" type="text">
+                  <div class="input-group-append">
+                      <button class="btn btn-theme" type="button">Apply Coupon</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-6 col-sm-6">
+          <div class="update-box">
+              <input value="Update Cart" type="submit" (click)=" updateCartItem()">
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

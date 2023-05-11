@@ -1,0 +1,87 @@
+
+<head>  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-EIHISL/DuuLBKTGv9XWkWpLEHYJRoIvjAgDzA0soRYwPvpez+2nFPrOyJX9t2nCW" crossorigin="anonymous">
+
+</head>
+
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Shop Detail</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                        <li class="breadcrumb-item active">Shop Detail </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <ngb-carousel [showNavigationIndicators]="false"    >
+                <ng-template ngbSlide *ngFor="let image of images">
+                <img [src]="image" alt="Slide">
+                </ng-template>
+                </ngb-carousel>
+                <span class="btn hvr-hover" >{{product.price | currency }}</span>
+            </div>
+            <div class="col-md-4">
+                <div class="single-product-details">
+                    <h2>{{product.title}}</h2>
+                    <h5> <del>$ 60.00</del> $40.79</h5>
+                    <p class="available-stock"><span> More than 20 available / <a href="#">8 sold </a></span><p>
+                    <h4>Short Description:</h4>
+                    <p>Nam sagittis a augue eget scelerisque. Nullam lacinia consectetur sagittis. Nam sed neque id eros fermentum dignissim quis at tortor. Nullam ultricies urna quis sem sagittis pharetra. Nam erat turpis, cursus in ipsum at,
+                        tempor imperdiet metus. In interdum id nulla tristique accumsan. Ut semper in quam nec pretium. Donec egestas finibus suscipit. Curabitur tincidunt convallis arcu. </p>
+                    <ul>
+                        <li>
+                            <div class="form-group quantity-box">
+                                <label class="control-label">Quantity</label>
+                                <input class="form-control" value="1" [(ngModel)]="quantity" min="1" max="20" type="number">
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="price-box-bar">
+                        <div class="cart-and-bay-btn">
+                            <a class="btn hvr-hover" data-fancybox-close="" href="#">Buy New</a>
+                            <a class="btn hvr-hover" data-fancybox-close=""  (click)="addToCart(product)">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="add-to-btn">
+                        <div class="add-comp">
+                            <a class="btn hvr-hover" href="#"><i class="fas fa-heart"></i> Add to wishlist</a>
+                            <a class="btn hvr-hover" href="#"><i class="fas fa-sync-alt"></i> Add to Compare</a>
+                        </div>
+                        <div class="share-bar">
+                            <a class="btn hvr-hover" href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                            <a class="btn hvr-hover" href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a>
+                            <a class="btn hvr-hover" href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a class="btn hvr-hover" href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a>
+                            <a class="btn hvr-hover" href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                         </div>
+                         
+                        
+                    </div>
+                </div>
+            </div>
+     </div>
+    </div>
+  
+      
+      
+
+
+
+
+
+
+
+
+
+    
+      

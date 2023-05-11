@@ -1,0 +1,49 @@
+/* .cart-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .cart-box-main {
+    position: fixed;
+    top: 70px;
+    right: -400px;
+    background-color: #fff;
+    z-index: 999;
+    height: 100vh;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+  }
+  
+  .show-cart-box {
+    right: 0;
+  }
+  
+  .table-main {
+    margin-top: 30px;
+  }
+  
+  .thumbnail-img img {
+    max-width: 100px;
+  }
+  
+  .quantity-box input {
+    width: 70px;
+  }
+   */
+
+  .cart-box-main {
+    top: 80px;
+    right: -500px; /* inicijalno skriveno sa desne strane */
+    width: 500px;
+    transition: right 0.3s ease; /* animacija prikazivanja i sakrivanja */
+    background-color:white;
+    z-index: 1000;
+  }
+  
+  .show-cart-box {
+    right: 0;
+  }
+  

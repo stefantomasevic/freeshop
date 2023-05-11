@@ -1,0 +1,58 @@
+<ngb-carousel [showNavigationIndicators]="false">
+    <ng-template ngbSlide>
+        <div class="overlay-background"></div>
+
+        <div>
+            <img src="/assets/images/banner-01.jpg" alt="Random third slide" class="img-fluid">
+        </div>
+
+
+
+        <div class="carousel-caption">
+            <h1>
+                <strong>First</strong> slide label
+            </h1>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <button class="btn hvr-hover" type="submit">CLICK</button>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="overlay-background"></div>
+
+        <div class="picsum-img-wrapper">
+            <img src="/assets/images/banner-03.jpg" alt="Random third slide" class="img-fluid">
+        </div>
+        <div class="carousel-caption">
+            <h1>
+                <strong> Third</strong> slide label
+            </h1>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+
+    </ng-template>
+</ngb-carousel>
+
+<div class="categories-shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" routerLink="product/categoryname">
+                <div class="shop-cat-box">
+                    <img class="img-fluid" src="/assets/images/categories_img_01.jpg" alt="" />
+                    <a class="btn hvr-hover">Category name</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" routerLink="product/categoryname">
+                <div class="shop-cat-box">
+                    <img class="img-fluid" src="/assets/images/categories_img_02.jpg" alt="" />
+                    <a class="btn hvr-hover">Category name</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" routerLink="product/categoryname">
+                <div class="shop-cat-box">
+                    <img class="img-fluid" src="/assets/images/categories_img_03.jpg" alt="" />
+                    <a class="btn hvr-hover">Category name</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

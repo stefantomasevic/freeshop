@@ -1,0 +1,47 @@
+<ngb-carousel [showNavigationIndicators]="false">
+    <ng-template ngbSlide>
+        <div class="overlay-background"></div>
+
+        <div>
+            <img src="/assets/images/banner-01.jpg" alt="Random third slide" class="img-fluid">
+        </div>
+
+
+
+        <div class="carousel-caption">
+            <h1>
+                <strong>First</strong> slide label
+            </h1>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <button class="btn hvr-hover" type="submit">CLICK</button>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="overlay-background"></div>
+
+        <div class="picsum-img-wrapper">
+            <img src="/assets/images/banner-03.jpg" alt="Random third slide" class="img-fluid">
+        </div>
+        <div class="carousel-caption">
+            <h1>
+                <strong> Third</strong> slide label
+            </h1>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+
+    </ng-template>
+</ngb-carousel>
+<table class="table">
+    <tr>
+        <th>Naziv</th>
+        <th>Cena</th>
+        <th>Dodaj u korpu</th>
+        <th>Izbaci iz korpe</th>
+    </tr>
+    <tr *ngFor="let item of productsObservable | async;">
+        <td>{{item.title}}</td>
+        <td>{{item.price}}</td>
+        <td><button (click)="addToCart(item)">Dodaj</button></td>
+        <td><button (click)="removeFromCart(item)">Izbaci</button></td>
+    </tr>
+</table>

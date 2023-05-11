@@ -1,0 +1,23 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened #sidenav>
+        <mat-list>
+            <mat-list-item routerLink="/admin">
+                <mat-icon>home</mat-icon>
+            </mat-list-item>
+            <mat-list-item routerLink="product"> Proizvodi </mat-list-item>
+            <mat-list-item routerLink="category"> Kategorije </mat-list-item>
+            <mat-list-item routerLink="customer"> Klijenti </mat-list-item>
+        </mat-list>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>{{title}}</span>
+            
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

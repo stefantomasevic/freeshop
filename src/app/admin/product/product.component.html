@@ -1,0 +1,39 @@
+<mat-card>
+    <mat-card-title>
+        <button mat-raised-button color="primary" (click)="addProduct()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </mat-card-title>
+    <mat-card-content>
+
+        <table mat-table [dataSource]="productsObservable | async" class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef style="width: 50px;"> Id </th>
+                <td mat-cell *matCellDef="let product"> {{product.id | number:'2.0-0'}} </td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Naziv </th>
+                <td mat-cell *matCellDef="let product"> {{product.title | uppercase}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef> Cena </th>
+                <td mat-cell *matCellDef="let product"> {{product.price | number:'1.0-2'}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef style="width: 50px;"> Akcija </th>
+                <td mat-cell *matCellDef="let product">
+                    <button mat-icon-button color="primary" (click)="edit(product)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+
+    </mat-card-content>
+</mat-card>
